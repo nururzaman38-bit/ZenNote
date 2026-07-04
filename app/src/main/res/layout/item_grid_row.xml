@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="4dp"
+    android:paddingHorizontal="4dp"
+    android:background="@android:color/transparent">
+
+    <!-- Auto Numbering Index -->
+    <TextView
+        android:id="@+id/tv_row_number"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:gravity="center"
+        android:textColor="@color/muted"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Done Checkbox -->
+    <CheckBox
+        android:id="@+id/cb_done"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:contentDescription="Mark Task as Done" />
+
+    <!-- Task Description Input -->
+    <EditText
+        android:id="@+id/et_task_desc"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:hint="New task item..."
+        android:textColorHint="@color/muted"
+        android:textColor="@color/on_surface"
+        android:textSize="14sp"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences"
+        android:maxLines="2" />
+
+    <!-- Category Input -->
+    <EditText
+        android:id="@+id/et_task_category"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@android:color/transparent"
+        android:hint="Category"
+        android:textColorHint="@color/muted"
+        android:textColor="@color/on_surface"
+        android:textSize="14sp"
+        android:importantForAutofill="no"
+        android:inputType="textCapWords"
+        android:maxLines="1" />
+
+    <!-- Delete Row Button -->
+    <ImageButton
+        android:id="@+id/btn_delete_row"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/accent_error"
+        android:contentDescription="Delete Row"
+        android:padding="6dp" />
+
+</LinearLayout>

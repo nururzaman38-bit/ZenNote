@@ -1,0 +1,6 @@
+{
+  "name": "ZenNote",
+  "description": "A highly flexible, block-based productivity app for notes, dynamic task grids, link bookmarks, secure password vaults, and media attachments with drag-and-drop reordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

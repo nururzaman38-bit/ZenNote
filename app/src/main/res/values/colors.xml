@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#6366F1</color> <!-- Indigo -->
+    <color name="primary_variant">#4F46E5</color>
+    <color name="secondary">#06B6D4</color> <!-- Cyan/Teal -->
+    <color name="background">#0F172A</color> <!-- Dark Slate -->
+    <color name="surface">#1E293B</color> <!-- Slate Card -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_background">#F8FAFC</color> <!-- Off white -->
+    <color name="on_surface">#F1F5F9</color>
+    <color name="muted">#94A3B8</color> <!-- Slate grey -->
+    <color name="accent_error">#EF4444</color>
+    <color name="divider">#334155</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
