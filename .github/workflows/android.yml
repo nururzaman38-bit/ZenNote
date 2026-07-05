@@ -30,8 +30,17 @@ jobs:
         if [ -f .env.example ]; then
           cp .env.example .env
         fi
+        
+        # Try to decode the keystore if the base64 file exists
         if [ -f debug.keystore.base64 ]; then
-          base64 -d debug.keystore.base64 > debug.keystore
+          echo "Decoding debug.keystore.base64..."
+          base64 -d debug.keystore.base64 > debug.keystore || echo "Base64 decoding failed"
+        fi
+        
+        # Fallback to keytool if debug.keystore is missing or empty
+        if [ ! -f debug.keystore ] || [ ! -s debug.keystore ]; then
+          echo "debug.keystore not found or empty. Generating a new one using keytool..."
+          keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
         fi
 
     - name: Build Debug APK
